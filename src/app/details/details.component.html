@@ -1,0 +1,7 @@
+<button class="btn btn-primary" (click)="displayDetails()">Display details</button>
+<p *ngIf="detailsDisplayed">Secret password = nothing</p>
+<p 
+    *ngFor="let click of clicks"
+    [ngStyle]="{backgroundColor : click >= 5 ? 'DodgerBlue': 'transparent'}"
+    [ngClass]="{'white-text' : click >= 5}"
+>{{ click }}</p>
